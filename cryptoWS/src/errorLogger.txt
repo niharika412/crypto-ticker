@@ -1,0 +1,114 @@
+Mon Mar 22 2021 15:16:08 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:8:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:18:01 GMT+0530 (India Standard Time) - ReferenceError: CircularJSON is not defined
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:8:20
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:18:21 GMT+0530 (India Standard Time) - SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:8:23
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:19:14 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:8:23
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:20:07 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:23
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:22:50 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:23:07 GMT+0530 (India Standard Time) - SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:24
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:24:04 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:25:14 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:14:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:26:59 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at ServerResponse.send (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:158:21)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:27:14 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at ServerResponse.send (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:158:21)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:28:36 GMT+0530 (India Standard Time) - TypeError: response.type is not a function
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:8:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:28:46 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at ServerResponse.send (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:158:21)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:9:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:31:25 GMT+0530 (India Standard Time) - ReferenceError: Flatted is not defined
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:10:21
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:32:18 GMT+0530 (India Standard Time) - ReferenceError: Flatted is not defined
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:10:21
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:33:57 GMT+0530 (India Standard Time) - SyntaxError: Unexpected token o in JSON at position 1
+    at parse (<anonymous>)
+    at parse (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\flatted\cjs\index.js:55:17)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:10:18
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 15:35:06 GMT+0530 (India Standard Time) - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'socket' -> object with constructor 'Object'
+    --- property '_httpMessage' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:1123:12)
+    at ServerResponse.json (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\express\lib\response.js:260:14)
+    at D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:10:13
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) 
+Mon Mar 22 2021 16:26:41 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 104.20.81.106:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16) 

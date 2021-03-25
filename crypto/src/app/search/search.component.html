@@ -1,0 +1,33 @@
+<div id="parent">
+  <div id="child">
+    <p class="display-3 text-center">Your Crypto Assistant</p>
+    <p class="subheading text-center">Search for a cryptocurrency to get full report</p>
+    <form class="form" id="search-form">
+      <div class="form-group">
+        <input id="name" type="text" placeholder="🔍 Type a currency name to search">
+      </div>
+      <div class="form-group">
+        <div class="chips">
+          <mat-label>Trending: &nbsp;&nbsp;</mat-label>
+          <mat-chip-list aria-label="Fish selection" id="chips">
+            <mat-chip>BTC</mat-chip>
+            <mat-chip>ETH</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col offset-5 down">
+      <span class="material-icons display-3">
+        keyboard_arrow_down
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<currencies></currencies>

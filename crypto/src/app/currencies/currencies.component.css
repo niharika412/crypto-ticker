@@ -1,0 +1,14 @@
+.table{
+    font-family: "Synce";
+    margin: 2%;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+.paginator{
+    display: fl;
+    align-items: center;
+}

@@ -1,0 +1,51 @@
+#parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+  }
+
+.subheading{
+  color: #1DA1F2
+}
+
+input{
+  border-radius: 48px;
+  width: 100%;
+  padding: 28px;
+}
+
+::placeholder{
+  /* color: #1DA1F2; */
+  font-size: medium;
+
+}
+
+.chips{
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+mat-icon{
+  color: white;
+}
+
+.down{
+  margin-bottom: 0;
+  margin-top: 14%;
+  padding: 50px;
+  color:#AAB8C2;
+  animation: down 1s linear infinite;
+}
+
+.market{
+    color:#AAB8C2;
+    animation: down 1s linear infinite;
+}
+@keyframes down {
+  50% {
+    opacity: 0;
+  }
+}

@@ -11,7 +11,7 @@ export class CryptoService {
 
   tickersURL="http://localhost:3000/getTickers/"
 
-  getPrices():Observable<any>{
+  getPrices():Observable<Object>{
     return this.http.get(this.tickersURL);
   }
 }

@@ -17,13 +17,16 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MarketComponent } from './market/market.component';
 import {MatTableModule} from '@angular/material/table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatTabsModule} from '@angular/material/tabs';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrenciesComponent,
     SearchComponent,
-    MarketComponent
+    MarketComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatTableModule,
     MatAutocompleteModule,
     MatChipsModule,
+    MatTabsModule,
     NgbModule
   ],
   providers: [],

@@ -1,6 +1,8 @@
 .table{
     font-family: "Synce";
-    margin: 2%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 img{
@@ -9,6 +11,13 @@ img{
 }
 
 .paginator{
-    display: fl;
-    align-items: center;
+    display: flex; 
+    padding: 1%;
+    justify-content:center;
 }
+
+.example-stretched-tabs {
+    width: 100%;
+    background-color:#E1E8ED ;
+    color:#14171A;
+  }

@@ -1,10 +1,14 @@
 .table{
     font-family: "Synce";
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto; */
+    overflow-y: auto;
+    
 }
-
+.table-responsive{
+    width:100%;
+    max-height: 600px;
+    padding: auto;
+}
 img{
     height: 30px;
     width: 30px;
@@ -16,6 +20,13 @@ img{
     justify-content:center;
 }
 
+.increase{
+    color: greenyellow;
+}
+
+.decrease{
+    color: red;
+}
 .example-stretched-tabs {
     width: 100%;
     background-color:#E1E8ED ;

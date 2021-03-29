@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FilterPipe } from './filter.pipe';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterPipe } from './filter.pipe';
     CurrenciesComponent,
     SearchComponent,
     MarketComponent,
-    FilterPipe
+    FilterPipe,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

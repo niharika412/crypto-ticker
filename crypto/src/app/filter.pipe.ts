@@ -6,6 +6,7 @@ interface Currency {
   change: any;
   colors: any;
   name:any;
+  quote_unit:any;
 }
 
 @Pipe({
@@ -16,8 +17,8 @@ interface Currency {
 export class FilterPipe implements PipeTransform {
   Currencies:any;
 
-  transform(items: Array<any>, category: string): Array<any> {
-    console.log(items.filter(item => item.quote_unit === category))
+  transform(items: Currency[], category: string): Array<any> {
+
     return items.filter(item => item.quote_unit === category);
 }
   }

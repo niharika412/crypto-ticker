@@ -10,6 +10,7 @@ interface Currency {
   change: any;
   colors: any;
   name:any;
+  quote_unit:any;
 }
 
 @Component({
@@ -25,35 +26,31 @@ export class CurrenciesComponent implements OnInit {
 
   test: any;
   ngOnInit(): void {
-    this.currencyArray = this.getCurrencies();
-    this.test = 'hi';
-    
+    this.currencyArray = this.getCurrencies();    
     // console.log(this.change)
     setInterval(() => {
       this.previous = [...this.change];
       this.currencyArray.splice(0)
       this.currencyArray =  this.getCurrencies();
-      // this.colors.splice(0)
-      // for(let i=0;i<this.change.length;i++){
-      //   this.colors.push(this.change[i]-this.previous[i])
-      // }
-      // console.log(this.currencyArray)
+      console.log(this.currencyArray)
     }, 10 * 1000);
   }
 
   previous: any;
   page = 2;
   change: any = []
-  colors: any = [{}]
+  colors: any = []
   red: boolean = false;
   green: boolean = false;
   currency = []
   currencies: any;
-  currencyArray: Currency[] = [];
+  currencyArray:Currency[]= [];
   error: any;
   pageSize = 10;
   pChange:any;
   diff:any;
+
+  
 
   getCurrencies(): any {
     this.cryptoService.getPrices().subscribe((success: any) => {
@@ -67,17 +64,19 @@ export class CurrenciesComponent implements OnInit {
       for (let e of this.currencyArray){
         this.change.push(e.last)
       }
-      // this.diff=[]
-      // for(let i=0;i<this.change.length;i++){
-      //   this.diff.push(Math.abs(this.change[i]-this.pChange[i]))
-      // }
       for(let i=0;i<this.currencyArray.length;i++){
         this.currencyArray[i].change=(this.change[i]-this.pChange[i]);
+        if((this.change[i]-this.pChange[i])>=0){
+          this.currencyArray[i].colors='green'
+        }
+        else{
+          this.currencyArray[i].colors='red'
+        }
       }
     }
       , (error: any) => this.error = error);
     if (!this.error) {
-      return this.currencyArray
+      return this.currencyArray;
     }
     else {
       return null

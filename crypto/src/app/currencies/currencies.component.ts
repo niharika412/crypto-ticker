@@ -23,7 +23,7 @@ export class CurrenciesComponent implements OnInit {
   constructor(private cryptoService: CryptoService) { }
   @ViewChild(MatPaginator) paginator: any;
 
-
+  
   test: any;
   ngOnInit(): void {
     this.currencyArray = this.getCurrencies();    

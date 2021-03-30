@@ -20,6 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FilterPipe } from './filter.pipe';
 import { DetailsComponent } from './details/details.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -38,14 +40,17 @@ import { DetailsComponent } from './details/details.component';
     MatIconModule,
     MatToolbarModule,
     MatInputModule,
+    HighchartsChartModule,
     MatPaginatorModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
     MatTableModule,
     MatAutocompleteModule,
     MatChipsModule,
     MatTabsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

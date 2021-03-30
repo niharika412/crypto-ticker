@@ -20,8 +20,8 @@
                   <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
-                  <td>{{currency.base_unit}}</td>
-                  <td>{{currency.last}} </td>
+                  <td>{{currency.base_unit }}</td>
+                  <td>{{currency.last | currency}} </td>
                   <td>{{currency.volume}}</td>
                   <td [ngClass]="{'increase': currency.colors === 'green', 'decrease':currency.colors === 'red' }">
                     {{currency.change  | number}}</td>
@@ -53,7 +53,7 @@
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>
-                  <td>{{currency.last}}</td>
+                  <td>{{currency.last | currency:'INR'}}</td>
                   <td>{{currency.volume}}</td>
                   <td [ngClass]="{'increase': currency.colors === 'green', 'decrease':currency.colors === 'red' }">
                     {{currency.change  | number}}</td>
@@ -84,7 +84,7 @@
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>
-                  <td>{{currency.last}} | {{currency.change}}</td>
+                  <td>{{currency.last}}</td>
                   <td>{{currency.volume}}</td>
                   <td [ngClass]="{'increase': currency.colors === 'green', 'decrease':currency.colors === 'red' }">
                     {{currency.change  | number}}</td>
@@ -135,5 +135,3 @@
     </div>
   </div> -->
 </div>
-
-<!-- <details></details> -->

@@ -32,7 +32,7 @@ export class CurrenciesComponent implements OnInit {
       this.previous = [...this.change];
       this.currencyArray.splice(0)
       this.currencyArray =  this.getCurrencies();
-      console.log(this.currencyArray)
+      // console.log(this.currencyArray)
     }, 10 * 1000);
   }
 

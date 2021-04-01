@@ -13,4 +13,5 @@ export class CurDetailsComponent implements OnInit {
   }
   @Input()
   name:any;
+
 }

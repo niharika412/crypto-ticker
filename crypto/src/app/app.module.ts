@@ -14,14 +14,17 @@ import { SearchComponent } from './search/search.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { MarketComponent } from './market/market.component';
 import {MatTableModule} from '@angular/material/table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FilterPipe } from './filter.pipe';
-import { DetailsComponent } from './details/details.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { CurDetailsComponent } from './cur-details/cur-details.component';
+import {MatCardModule} from '@angular/material/card';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     CurrenciesComponent,
     SearchComponent,
     MarketComponent,
-    FilterPipe,
-    DetailsComponent
-  ],
+    FilterPipe,CurDetailsComponent,
+  ChartComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,10 +48,12 @@ import { HighchartsChartModule } from 'highcharts-angular';
     ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatCardModule,
     MatTableModule,
     MatAutocompleteModule,
     MatChipsModule,
     MatTabsModule,
+    MatGridListModule,
     NgbModule,
   ],
   providers: [],

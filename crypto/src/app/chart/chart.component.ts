@@ -42,13 +42,13 @@ export class ChartComponent implements OnInit {
         {
           type: 'line',
           name: this.name,
-          data: this.dataPoints.slice(0, 7)
+          data: this.dataPoints.slice(0, 31)
 
         },
         {
           type: 'line',
           name: 'Volumes',
-          data: this.volumes.slice(0, 7),
+          data: this.volumes.slice(0, 31),
           yAxis: 1
         }
       ]
@@ -71,7 +71,7 @@ export class ChartComponent implements OnInit {
       
     },
     title: {
-      text: 'Stock Chart for' + this.name
+      text: 'Stock Chart for ' + this.name
     },
     subtitle: {
       text: 'Source: alphavantage.co'
@@ -82,25 +82,24 @@ export class ChartComponent implements OnInit {
       crosshair: true
     },
     yAxis: {
-      min: 0,
       title: {
         text: 'Closing Price ($)'
       }
     },
-    // tooltip: {
-    //   headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    //   pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-    //     '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
-    //   footerFormat: '</table>',
-    //   shared: true,
-    //   useHTML: true
-    // },
-    // plotOptions: {
-    //   column: {
-    //     pointPadding: 0.2,
-    //     borderWidth: 0
-    //   }
-    // },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.1f} $</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
+      }
+    },
     series: [{
       type: 'line',
       name: 'Dates',

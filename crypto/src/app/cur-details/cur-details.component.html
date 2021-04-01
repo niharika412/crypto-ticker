@@ -1,21 +1,130 @@
 <div class="container-fluid">
-    <!-- <mat-card class="mat-card">
+    <mat-card class="mat-card">
         <mat-card-header>
             <img mat-card-avatar class="header-image" src="./assets/color/{{name | lowercase}}.svg">
-            <mat-card-title class="cardTitle">{{name}}</mat-card-title> -->
-            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-        <!-- </mat-card-header>
+            <mat-card-title class="cardTitle">{{name}}</mat-card-title>
+            <a mat-button><span class="material-icons">bookmark</span></a>
+        </mat-card-header>
         <mat-card-content>
-            <mat-grid-list cols="3" rowHeight="2:1">
-                <mat-grid-tile colspan="2">1</mat-grid-tile>
-                <mat-grid-tile>
-                    <chart></chart>
-                </mat-grid-tile>
-                <mat-grid-tile colspan="2">4</mat-grid-tile>
-                <mat-grid-tile>5</mat-grid-tile>
-            </mat-grid-list>
-        </mat-card-content>
-    </mat-card> -->
-    <chart></chart>
-</div>
+            <div class="row">
+                <div class="col cardsInside">
+                    <div class="row">
+                        <div class="col">
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                    <mat-card-title>Digital currency bitcoin</mat-card-title>
+                                    <mat-card-subtitle>Price Summary</mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <table class="table table-dark tableDetails">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-dark tableDetails">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <mat-card>
+                                <mat-card-content>
+                                    <table class="table table-dark tableDetails">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Orders</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="col">
+                            <mat-card>
+                                <mat-card-content>
+                                    <table class="table table-dark tableDetails">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Orders</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mark</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="col">
+                    <mat-card class="example-card">
+                        <mat-card-content>
+                            <chart></chart>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

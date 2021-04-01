@@ -9,4 +9,16 @@
 
 .cardTitle{
     font-size:60px;
+    font-family: "Synce";
+}
+
+.detailsTable{
+    height: 100%;
+    width: 100%;
+    margin: 5%;
+}
+
+.chart{
+    color: white;
+    background-color: #121212;
 }

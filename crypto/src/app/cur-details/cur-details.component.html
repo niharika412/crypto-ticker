@@ -12,39 +12,39 @@
                         <div class="col">
                             <mat-card class="example-card">
                                 <mat-card-header>
-                                    <mat-card-title>Digital currency bitcoin</mat-card-title>
+                                    <mat-card-title>Digital Currency Name: {{metadata['3. Digital Currency Name'] }}</mat-card-title>
                                     <mat-card-subtitle>Price Summary</mat-card-subtitle>
                                 </mat-card-header>
                                 <mat-card-content>
                                     <table class="table table-dark tableDetails">
                                         <thead>
                                             <tr>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
+                                                <th scope="col">Today's Open</th>
+                                                <th scope="col">Today's Low</th>
+                                                <th scope="col">Today's High</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <td>{{todayDetails['1b. open (USD)'] | currency}}</td>
+                                                <td>{{todayDetails['3b. low (USD)'] | currency}}</td>
+                                                <td>{{todayDetails['2b. high (USD)'] | currency}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                     <table class="table table-dark tableDetails">
                                         <thead>
                                             <tr>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
+                                                <th scope="col">Volume Traded</th>
+                                                <th scope="col">Market Cap</th>
+                                                <th scope="col">Close</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <td>{{todayDetails['5. volume']}}</td>
+                                                <td>{{todayDetails['6. market cap (USD)'] | currency}}</td>
+                                                <td>{{todayDetails['4b. close (USD)'] | currency}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -60,7 +60,7 @@
                                     <table class="table table-dark tableDetails">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Orders</th>
+                                                <th scope="col">Orders History (WazirX)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -90,7 +90,7 @@
                                     <table class="table table-dark tableDetails">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Orders</th>
+                                                <th scope="col">Market History</th>
                                             </tr>
                                         </thead>
                                         <tbody>

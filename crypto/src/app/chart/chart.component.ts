@@ -37,7 +37,7 @@ export class ChartComponent implements OnInit {
       }
       this.dataPoints = this.dataPoints.map(Number);
       this.volumes = this.volumes.map(Number);
-      console.log(this.dataPoints)
+      // console.log(this.dataPoints)
       this.chartOptions.series = [
         {
           type: 'line',

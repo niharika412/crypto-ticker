@@ -14,6 +14,7 @@ export class CurDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMeta();
+    this.getOrders();
   }
   @Input()
   name:any;
@@ -23,6 +24,9 @@ export class CurDetailsComponent implements OnInit {
   latestDate:any;
   todayDetails:any;
   data:any;
+  orders:any;
+  errorMsg:any;
+
   getMeta(){
     this.curDetService.getMetaData().subscribe((success:any)=>
     {
@@ -32,6 +36,13 @@ export class CurDetailsComponent implements OnInit {
       this.latestDate =this.datepipe.transform(this.today, 'yyyy-MM-dd');
       this.todayDetails= this.data['Time Series (Digital Currency Daily)'][this.latestDate];
   },(error:any)=>this.errorMessage=error);
+  }
+
+  getOrders(){
+    this.curDetService.getOrders().subscribe((success:any)=>{
+      this.orders=success;
+      console.log(this.orders)
+    },(error:any)=>this.errorMsg=error);
   }
 
 }

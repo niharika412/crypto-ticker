@@ -5,3 +5,7 @@ GET http://localhost:3000/getTickers/
 ###
 
 GET http://localhost:3000/ordersHistory/btcusdt
+
+###
+
+GET http://localhost:3000/marketHistory/btcusdt

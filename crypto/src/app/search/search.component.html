@@ -8,12 +8,12 @@
         aria-label="Number"
         matInput
         [formControl]="myControl" formControlName="search"
-        [matAutocomplete]="auto" (keyup.enter)="searchFor()" >
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+         (keyup.enter)="searchFor()" >
+        <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
             {{option}}
           </mat-option>
-        </mat-autocomplete>
+        </mat-autocomplete> -->
       </div>
       <div class="form-group">
         <div class="chips">
@@ -21,6 +21,7 @@
           <mat-chip-list aria-label="selection" id="chips">
             <mat-chip>BTC</mat-chip>
             <mat-chip>ETH</mat-chip>
+            <mat-chip>DOGE</mat-chip>
           </mat-chip-list>
         </div>
       </div>

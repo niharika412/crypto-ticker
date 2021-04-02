@@ -14,10 +14,19 @@ export class CurDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMeta();
-    this.getOrders();
+    this.orders =this.getOrders();
+    this.history=this.getMarketHistory();
+    setInterval(() => {
+      this.orders=[]
+      this.orders=this.getOrders();
+      this.history=[]
+      this.history=this.getMarketHistory();
+      // console.log(this.currencyArray)
+    }, 10 * 1000);
   }
   @Input()
   name:any;
+
   errorMessage:any;
   today:any
   metadata:any;
@@ -26,9 +35,11 @@ export class CurDetailsComponent implements OnInit {
   data:any;
   orders:any;
   errorMsg:any;
+  history:any;
+  errMsg:any;
 
   getMeta(){
-    this.curDetService.getMetaData().subscribe((success:any)=>
+    this.curDetService.getMetaData(this.name).subscribe((success:any)=>
     {
       this.data=success;
       this.metadata=this.data['Meta Data'];
@@ -39,10 +50,13 @@ export class CurDetailsComponent implements OnInit {
   }
 
   getOrders(){
-    this.curDetService.getOrders().subscribe((success:any)=>{
+    this.curDetService.getOrders(this.name).subscribe((success:any)=>{
       this.orders=success;
-      console.log(this.orders)
+      return this.orders;
     },(error:any)=>this.errorMsg=error);
   }
 
+  getMarketHistory(){
+    this.curDetService.getMarketHistory(this.name).subscribe((success:any)=>{ this.history=success;return this.history},(error:any)=>this.errMsg=error);
+  }
 }

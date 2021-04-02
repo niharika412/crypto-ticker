@@ -79,9 +79,9 @@
                                             <tr>
                                                 <td><span class="text-success">{{orders['asks'][3][0]}}</span> - <span class="text-danger">{{orders['bids'][3][0]}}</span> </td>
                                             </tr>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td><span class="text-success">{{orders['asks'][4][0]}}</span> - <span class="text-danger">{{orders['bids'][4][0]}}</span> </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                     </mat-card-content>
@@ -95,23 +95,26 @@
                                             <tr>
                                                 <th scope="col">Market History</th>
                                             </tr>
+                                            <tr>
+                                                <th scope="col">Price , Volume</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Mark</td>
+                                                <td>{{history[0].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Mark</td>
+                                                <td>{{history[1].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Mark</td>
+                                                <td>{{history[2].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Mark</td>
+                                                <td>{{history[3].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
-                                            <tr>
-                                                <td>Mark</td>
-                                            </tr>
+                                            <!-- <tr>
+                                                <td>{{history[4].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                     </mat-card-content>
@@ -123,7 +126,9 @@
                 <div class="col">
                     <mat-card class="example-card">
                         <mat-card-content>
-                            <chart></chart>
+                            <chart [name]="name"></chart>
+                            <br>
+                            
                         </mat-card-content>
                     </mat-card>
                 </div>

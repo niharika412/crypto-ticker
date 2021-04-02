@@ -8,4 +8,8 @@ import * as Highcharts from 'highcharts';
 })
 export class AppComponent {
   title = 'crypto';
+
+  reload(){
+    window.location.reload();
+  }
 }

@@ -25,6 +25,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { CurDetailsComponent } from './cur-details/cur-details.component';
 import {MatCardModule} from '@angular/material/card';
 import { ChartComponent } from './chart/chart.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ChartComponent } from './chart/chart.component';
     HighchartsChartModule,
     MatPaginatorModule,
     FormsModule,
+    MatButtonToggleModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,

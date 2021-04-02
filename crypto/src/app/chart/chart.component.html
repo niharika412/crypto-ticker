@@ -1,3 +1,7 @@
-<highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"  [(update)]="updateFlag" style="height: 100%;width:100%"></highcharts-chart>
-<!-- {{data|json}} -->
-
+<highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="updateFlag"
+    style="height: 100%;width:100%"></highcharts-chart>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold" (click)="getGraph(0)">Daily</mat-button-toggle>&nbsp;
+    <mat-button-toggle value="italic" (click)="getGraph(1)">Weekly</mat-button-toggle>&nbsp;
+    <mat-button-toggle value="underline" (click)="getGraph(2)">Monthly</mat-button-toggle>
+</mat-button-toggle-group>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { ChartService } from './chart.service';
 
@@ -11,56 +11,133 @@ export class ChartComponent implements OnInit {
 
   constructor(private chartService: ChartService) { }
 
+  @Input()
+  name:any;
+
   data: any;
   errorMsg: any;
   dates: any = []
   values: any = []
   dataPoints: any = []
   volumes: any = []
+  cname:any;
   updateFlag: boolean = false;
-  name = "BTC"
   ngOnInit(): void {
-    this.getData();
+    this.getData(this.name,0);
   }
 
-  getData() {
-    this.chartService.getHistoricalData().subscribe((success: any) => {
-      this.data = success;
-      this.values = this.data['Time Series (Digital Currency Daily)']
-      this.dataPoints = []
-      this.dates = []
-      this.volumes = []
-      for (let i in this.values) {
-        this.dates.push(i);
-        this.dataPoints.push(this.values[i]['4b. close (USD)']);
-        this.volumes.push(this.values[i]['volume'])
-      }
-      this.dataPoints = this.dataPoints.map(Number);
-      this.volumes = this.volumes.map(Number);
-      // console.log(this.dataPoints)
-      this.chartOptions.series = [
-        {
-          type: 'line',
-          name: this.name,
-          data: this.dataPoints.slice(0, 31)
+  daily:any;
+  monthly:any;
+  weekly:any
 
-        },
-        {
-          type: 'line',
-          name: 'Volumes',
-          data: this.volumes.slice(0, 31),
-          yAxis: 1
+  getData(name:string,type:number) {
+    if(type==0){
+      this.chartService.getHistoricalDataDaily(name).subscribe((success: any) => {
+        this.data = success;
+        this.values = this.data['Time Series (Digital Currency Daily)']
+        this.dataPoints = []
+        this.dates = []
+        this.volumes = []
+        for (let i in this.values) {
+          this.dates.push(i);
+          this.dataPoints.push(this.values[i]['4b. close (USD)']);
+          this.volumes.push(this.values[i]['volume'])
         }
-      ]
-      this.chartOptions.xAxis = {
-        categories: this.dates,
-        crosshair: true
-      }
+        this.dataPoints = this.dataPoints.map(Number);
+        this.volumes = this.volumes.map(Number);
+        console.log(this.dataPoints)
+        this.chartOptions.series = [
+          {
+            type: 'line',
+            name: this.name,
+            data: this.dataPoints.slice(0, 31)
+          }
+        ]
+        this.chartOptions.xAxis = {
+          categories: this.dates,
+          crosshair: true
+        }
+        this.chartOptions.title={
+          text: 'Stock Chart for ' + this.name
+        }
+  
+        this.updateFlag = true;
+        // console.log(this.dataPoints)
+      },
+        (error: any) => this.errorMsg = error)
+    }
+    else if(type==1){
+      this.chartService.getHistoricalDataWeekly(name).subscribe((success: any) => {
+        this.data = success;
+        console.log(this.data)
+        this.values = this.data['Time Series (Digital Currency Weekly)']
+        this.dataPoints = []
+        this.dates = []
+        this.volumes = []
+        for (let i in this.values) {
+          this.dates.push(i);
+          this.dataPoints.push(this.values[i]['4b. close (USD)']);
+          this.volumes.push(this.values[i]['volume'])
+        }
+        this.dataPoints = this.dataPoints.map(Number);
+        this.volumes = this.volumes.map(Number);
+        console.log(this.dataPoints)
+        this.chartOptions.series = [
+          {
+            type: 'line',
+            name: this.name,
+            data: this.dataPoints.slice(0, 31)
+          }
+        ]
+        this.chartOptions.xAxis = {
+          categories: this.dates,
+          crosshair: true
+        }
+        this.chartOptions.title={
+          text: 'Stock Chart for ' + this.name
+        }
+  
+        this.updateFlag = true;
+        console.log('2')
+      },
+        (error: any) => this.errorMsg = error)
+    }
+    else{
+      this.chartService.getHistoricalDataMonthly(name).subscribe((success: any) => {
+        this.data = success;
+        this.values = this.data['Time Series (Digital Currency Monthly)']
+        this.dataPoints = []
+        this.dates = []
+        this.volumes = []
+        for (let i in this.values) {
+          this.dates.push(i);
+          this.dataPoints.push(this.values[i]['4b. close (USD)']);
+          this.volumes.push(this.values[i]['volume'])
+        }
+        this.dataPoints = this.dataPoints.map(Number);
+        this.volumes = this.volumes.map(Number);
+        // console.log(this.dataPoints)
+        this.chartOptions.series = [
+          {
+            type: 'line',
+            name: this.name,
+            data: this.dataPoints.slice(0, 31)
+          }
+        ]
+        this.chartOptions.xAxis = {
+          categories: this.dates,
+          crosshair: true
+        }
+        this.chartOptions.title={
+          text: 'Stock Chart for ' + this.name
+        }
+  
+        this.updateFlag = true;
+        // console.log(this.dataPoints)
+      },
+        (error: any) => this.errorMsg = error)
+    }
 
-      this.updateFlag = true;
-      // console.log(this.dataPoints)
-    },
-      (error: any) => this.errorMsg = error)
   }
 
   Highcharts: typeof Highcharts = Highcharts;
@@ -71,7 +148,7 @@ export class ChartComponent implements OnInit {
       
     },
     title: {
-      text: 'Stock Chart for ' + this.name
+      text: 'Stock Chart Loading'
     },
     subtitle: {
       text: 'Source: alphavantage.co'
@@ -106,5 +183,16 @@ export class ChartComponent implements OnInit {
       data: []
 
     }]
+  }
+
+  getGraph(type:number){
+    if(type==0){
+      this.getData(this.name,0)
+    }
+    else if(type==1)
+    {
+      this.getData(this.name,1)
+    }
+    else this.getData(this.name,2)
   }
 }

@@ -1,4 +1,12 @@
-<div class="container-fluid">
+<div class="container err" *ngIf="errorMsg">
+
+    <p class="text-center"><span class="material-icons display-2 sad text-center">
+            sentiment_dissatisfied
+        </span></p>
+    <p class="text-center ">Sorry! No such cryptocurrency in our system.</p>
+</div>
+
+<div class="container-fluid" *ngIf="!errorMsg">
     <mat-card class="mat-card">
         <mat-card-header>
             <img mat-card-avatar class="header-image" src="./assets/color/{{name | lowercase}}.svg">
@@ -12,7 +20,8 @@
                         <div class="col">
                             <mat-card class="example-card">
                                 <mat-card-header>
-                                    <mat-card-title>Digital Currency Name: {{metadata['3. Digital Currency Name'] }}</mat-card-title>
+                                    <mat-card-title>Digital Currency Name: {{metadata['3. Digital Currency Name'] }}
+                                    </mat-card-title>
                                     <mat-card-subtitle>Price Summary</mat-card-subtitle>
                                 </mat-card-header>
                                 <mat-card-content>
@@ -68,23 +77,27 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><span class="text-success">{{orders['asks'][0][0]}}</span> - <span class="text-danger">{{orders['bids'][0][0]}}</span> </td>
+                                                <td><span class="text-success">{{orders['asks'][0][0]}}</span> - <span
+                                                        class="text-danger">{{orders['bids'][0][0]}}</span> </td>
                                             </tr>
                                             <tr>
-                                                <td><span class="text-success">{{orders['asks'][1][0]}}</span> - <span class="text-danger">{{orders['bids'][1][0]}}</span> </td>
+                                                <td><span class="text-success">{{orders['asks'][1][0]}}</span> - <span
+                                                        class="text-danger">{{orders['bids'][1][0]}}</span> </td>
                                             </tr>
                                             <tr>
-                                                <td><span class="text-success">{{orders['asks'][2][0]}}</span> - <span class="text-danger">{{orders['bids'][2][0]}}</span> </td>
+                                                <td><span class="text-success">{{orders['asks'][2][0]}}</span> - <span
+                                                        class="text-danger">{{orders['bids'][2][0]}}</span> </td>
                                             </tr>
                                             <tr>
-                                                <td><span class="text-success">{{orders['asks'][3][0]}}</span> - <span class="text-danger">{{orders['bids'][3][0]}}</span> </td>
+                                                <td><span class="text-success">{{orders['asks'][3][0]}}</span> - <span
+                                                        class="text-danger">{{orders['bids'][3][0]}}</span> </td>
                                             </tr>
                                             <!-- <tr>
                                                 <td><span class="text-success">{{orders['asks'][4][0]}}</span> - <span class="text-danger">{{orders['bids'][4][0]}}</span> </td>
                                             </tr> -->
                                         </tbody>
                                     </table>
-                                    </mat-card-content>
+                                </mat-card-content>
                             </mat-card>
                         </div>
                         <div class="col">
@@ -101,23 +114,27 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>{{history[0].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
+                                                <td>{{history[0].price}} , <span
+                                                        class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>{{history[1].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
+                                                <td>{{history[1].price}} , <span
+                                                        class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>{{history[2].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
+                                                <td>{{history[2].price}} , <span
+                                                        class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <tr>
-                                                <td>{{history[3].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
+                                                <td>{{history[3].price}} , <span
+                                                        class="text-warning">{{history[0].volume}}</span></td>
                                             </tr>
                                             <!-- <tr>
                                                 <td>{{history[4].price}} , <span class="text-warning">{{history[0].volume}}</span></td>
                                             </tr> -->
                                         </tbody>
                                     </table>
-                                    </mat-card-content>
+                                </mat-card-content>
                             </mat-card>
                         </div>
                     </div>
@@ -128,7 +145,7 @@
                         <mat-card-content>
                             <chart [name]="name"></chart>
                             <br>
-                            
+
                         </mat-card-content>
                     </mat-card>
                 </div>

@@ -31,3 +31,15 @@
 td{
     color:#1DA1F2;
 }
+
+.err{
+    font-family: "Synce";
+    font-size: 50px;
+}
+.sad{
+    margin-top: 10%;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    50% {transform: rotate(360deg);}
+  }

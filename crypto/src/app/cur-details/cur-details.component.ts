@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CurdetailsService } from './curdetails.service';
 import { DatePipe } from '@angular/common'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'cur-details',
@@ -13,6 +14,7 @@ export class CurDetailsComponent implements OnInit {
   constructor(private curDetService:CurdetailsService,public datepipe:DatePipe) { }
 
   ngOnInit(): void {
+  
     this.getMeta();
     this.orders =this.getOrders();
     this.history=this.getMarketHistory();
@@ -37,6 +39,7 @@ export class CurDetailsComponent implements OnInit {
   errorMsg:any;
   history:any;
   errMsg:any;
+  notAv:boolean=false;
 
   getMeta(){
     this.curDetService.getMetaData(this.name).subscribe((success:any)=>
@@ -46,7 +49,7 @@ export class CurDetailsComponent implements OnInit {
       this.today = new Date();
       this.latestDate =this.datepipe.transform(this.today, 'yyyy-MM-dd');
       this.todayDetails= this.data['Time Series (Digital Currency Daily)'][this.latestDate];
-  },(error:any)=>this.errorMessage=error);
+  },(error:any)=>{this.errorMessage=error;this.notAv=true});
   }
 
   getOrders(){

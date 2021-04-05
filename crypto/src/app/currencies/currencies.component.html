@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" >
   <div class="row">
     <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
       <mat-tab label="USDT">
@@ -113,7 +113,7 @@
                 <tr *ngIf="currency.quote_unit=='wrx'">
                   <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
-                      onError="this.src='./assets/color/image-not-found.svg'"></td>
+                      onerror="this.onerror=null;this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>
                   <td>{{currency.last}}</td>
                   <td>{{currency.volume}}</td>

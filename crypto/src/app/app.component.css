@@ -8,3 +8,8 @@ mat-toolbar{
   color: white;
   font-size: medium;
 }
+
+.login-icon{
+  color: white;
+  background-color: #1DA1F2;
+}

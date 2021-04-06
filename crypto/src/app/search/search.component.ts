@@ -23,7 +23,8 @@ export class SearchComponent implements OnInit {
   data:any;
   err:any;
   cArr:any;
-
+  inputSearch:any;
+  
   ngOnInit() {
     this.searchForm=this.fb.group({
       search:['',Validators.required]

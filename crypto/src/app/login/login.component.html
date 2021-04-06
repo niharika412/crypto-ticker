@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <mat-card class="example-card login">
+                <mat-card-content>
+                    <div class="text-center head"><span class="material-icons">moving</span>Crypticker</div>
+                    <form>
+                        <p>Login</p>
+                        <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your email:</mat-label>
+                                <input matInput>
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-hint>Ex: jane@doe.com</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-hint>Ex. janedoe123</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <br>
+                        <button mat-raised-button class="login-btn btn btn-block">Login</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

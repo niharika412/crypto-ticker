@@ -26,6 +26,7 @@ import { CurDetailsComponent } from './cur-details/cur-details.component';
 import {MatCardModule} from '@angular/material/card';
 import { ChartComponent } from './chart/chart.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     SearchComponent,
     MarketComponent,
     FilterPipe,CurDetailsComponent,
-  ChartComponent ],
+  ChartComponent,
+  LoginComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

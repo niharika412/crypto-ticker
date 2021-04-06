@@ -17,7 +17,7 @@ input{
 }
 
 ::placeholder{
-  /* color: #1DA1F2; */
+  color: #242526;
   font-size: medium;
 
 }
@@ -45,7 +45,7 @@ mat-icon{
     animation: down 1s linear infinite;
 }
 @keyframes down {
-  50% {
+  50% { 
     opacity: 0;
   }
 }

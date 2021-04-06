@@ -28,6 +28,7 @@ import { ChartComponent } from './chart/chart.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { RegisterComponent } from './register/register.component';
     FilterPipe,CurDetailsComponent,
   ChartComponent,
   LoginComponent,
-  RegisterComponent ],
+  RegisterComponent,
+  WatchlistComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

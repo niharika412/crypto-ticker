@@ -1834,3 +1834,79 @@ Mon Apr 05 2021 16:06:41 GMT+0530 (India Standard Time) - Error: Request failed 
     at IncomingMessage.emit (events.js:327:22)
     at endReadableNT (_stream_readable.js:1327:12)
     at processTicksAndRejections (internal/process/task_queues.js:80:21) 
+Tue Apr 06 2021 14:34:40 GMT+0530 (India Standard Time) - Error: getaddrinfo ENOTFOUND api.wazirx.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) 
+Tue Apr 06 2021 14:34:50 GMT+0530 (India Standard Time) - Error: getaddrinfo ENOTFOUND api.wazirx.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) 
+Tue Apr 06 2021 19:54:34 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Path `password` is required., email: Path `email` is required., dob: Path `dob` is required., userName: Path `userName` is required.
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 19:54:52 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Min 8 chars, 1 special, 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 19:55:01 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Min 8 chars, 1 special, 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 19:55:08 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Min 8 chars, 1 special, 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 19:55:15 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Min 8 chars, 1 special, 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 19:55:54 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: Min 8 chars, 1 special, 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 20:07:22 GMT+0530 (India Standard Time) - TypeError: this.generateID is not a function
+    at Object.user.addUser (D:\cryptoTicker\crypto-ticker\cryptows\src\model\users.js:24:32)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.addUser (D:\cryptoTicker\crypto-ticker\cryptows\src\service\userService.js:12:16)
+    at async D:\cryptoTicker\crypto-ticker\cryptows\src\routes\routing.js:39:28 
+Tue Apr 06 2021 20:12:45 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptows\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptows\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptows\src\routes\routing.js:50:21 
+Tue Apr 06 2021 20:12:55 GMT+0530 (India Standard Time) - ValidationError: User validation failed: password: 1 number
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2523:17
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) 
+Tue Apr 06 2021 20:12:59 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptows\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptows\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptows\src\routes\routing.js:50:21 
+Tue Apr 06 2021 20:13:48 GMT+0530 (India Standard Time) - ValidationError: User validation failed: dob: Cast to date failed for value "18/09/2003" at path "dob"
+    at model.Document.invalidate (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:2703:32)
+    at model.$set (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:105:12)
+    at new model (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:4718:15)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:3065:22
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:3101:7
+    at Array.forEach (<anonymous>)
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:3100:15
+    at D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\index.js:1152:10)
+    at Function.create (D:\cryptoTicker\crypto-ticker\cryptows\node_modules\mongoose\lib\model.js:3035:23)
+    at Object.user.addUser (D:\cryptoTicker\crypto-ticker\cryptows\src\model\users.js:28:31) 
+Tue Apr 06 2021 20:14:26 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptows\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptows\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptows\src\routes\routing.js:50:21 

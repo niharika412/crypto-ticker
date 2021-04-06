@@ -9,3 +9,27 @@ GET http://localhost:3000/ordersHistory/btcusdt
 ###
 
 GET http://localhost:3000/marketHistory/btcusdt
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "userName":"sir",
+    "dob":"11/12/2003",
+    "email":"sir@gmail.com",
+    "password":"Sir1112",
+    "watchList":["BTC"]
+}
+
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "userName":"asmin", 
+  "password":"Asmin06" 
+}

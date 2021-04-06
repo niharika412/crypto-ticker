@@ -27,6 +27,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ChartComponent } from './chart/chart.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoginComponent } from './login/login.component';
     MarketComponent,
     FilterPipe,CurDetailsComponent,
   ChartComponent,
-  LoginComponent ],
+  LoginComponent,
+  RegisterComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

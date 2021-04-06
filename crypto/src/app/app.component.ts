@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import * as Highcharts from 'highcharts';
 
 @Component({
@@ -12,4 +13,5 @@ export class AppComponent {
   reload(){
     window.location.reload();
   }
+  constructor(private router:Router){}
 }

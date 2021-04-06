@@ -1,17 +1,32 @@
 <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
-            <mat-card class="example-card login">
+            <mat-card class="example-card register">
                 <mat-card-content>
                     <div class="text-center head"><span class="material-icons">moving</span>Crypticker</div>
                     <form>
-                        <p>Sign In</p>
+                        <p>Welcome ! Fill in your details to register.</p>
+                        <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your name:</mat-label>
+                                <input matInput>
+                                <mat-icon matSuffix>face</mat-icon>
+                                <mat-hint>Ex: Jane Doe</mat-hint>
+                            </mat-form-field>
+                        </p>
                         <p>
                             <mat-form-field appearance="fill">
                                 <mat-label>Enter your email:</mat-label>
                                 <input matInput>
-                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-icon matSuffix>mail_outline</mat-icon>
                                 <mat-hint>Ex: jane@doe.com</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your DOB:</mat-label>
+                                <input matInput type="date">
+                                <mat-icon matSuffix>event</mat-icon>
                             </mat-form-field>
                         </p>
                         <p>
@@ -26,8 +41,7 @@
                             </mat-form-field>
                         </p>
                         <br>
-                        <button mat-raised-button class="login-btn btn btn-block">Login</button>
-                        <button class="btn btn-link" [routerLink]="['/register']">Not a member? Register Here.</button>
+                        <button mat-raised-button class="login-btn btn btn-block">Register</button>
 
                     </form>
                 </mat-card-content>

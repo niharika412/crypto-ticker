@@ -4,40 +4,56 @@
             <mat-card class="example-card register">
                 <mat-card-content>
                     <div class="text-center head"><span class="material-icons">moving</span>Crypticker</div>
-                    <form>
+                    <form [formGroup]="registerForm">
                         <p>Welcome ! Fill in your details to register.</p>
                         <p>
                             <mat-form-field appearance="fill">
                                 <mat-label>Enter your name:</mat-label>
-                                <input matInput>
+                                <input matInput formControlName="name">
                                 <mat-icon matSuffix>face</mat-icon>
                                 <mat-hint>Ex: Jane Doe</mat-hint>
+                                <mat-error *ngIf="registerForm.controls.name.errors">
+                                    <span *ngIf="registerForm.controls.name.errors.required">Field cannot be empty</span>
+                                    <span *ngIf="registerForm.controls.name.errors && !registerForm.controls.name.errors.required">Name should be atleast 3 chars</span>
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field appearance="fill">
                                 <mat-label>Enter your email:</mat-label>
-                                <input matInput>
+                                <input matInput formControlName="email">
                                 <mat-icon matSuffix>mail_outline</mat-icon>
                                 <mat-hint>Ex: jane@doe.com</mat-hint>
+                                <mat-error *ngIf="registerForm.controls.email.errors">
+                                    <span *ngIf="registerForm.controls.email.errors.required">Field cannot be empty</span>
+                                    <span *ngIf="registerForm.controls.email.errors && !registerForm.controls.email.errors.required">{{registerForm.controls.email.errors.emailError}}</span>
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field appearance="fill">
                                 <mat-label>Enter your DOB:</mat-label>
-                                <input matInput type="date">
+                                <input matInput type="date" formControlName="dob">
                                 <mat-icon matSuffix>event</mat-icon>
+                                <mat-error *ngIf="registerForm.controls.dob.errors">
+                                    <span *ngIf="registerForm.controls.dob.errors.required">Field cannot be empty</span>
+                                    <span *ngIf="registerForm.controls.dob.errors && !registerForm.controls.dob.errors.required">{{registerForm.controls.dob.errors.dobError}}</span>
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field appearance="fill">
                                 <mat-label>Enter your password</mat-label>
-                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
                                 <button mat-icon-button matSuffix (click)="hide = !hide"
                                     [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                                 </button>
                                 <mat-hint>Ex. janedoe123</mat-hint>
+                                <mat-error *ngIf="registerForm.controls.password.errors">
+                                    <span *ngIf="registerForm.controls.password.errors.required">Field cannot be empty</span>
+                                    <span *ngIf="registerForm.controls.password.errors && !registerForm.controls.password.errors.required">{{registerForm.controls.password.errors.pwdError}}</span>
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <br>

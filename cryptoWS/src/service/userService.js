@@ -13,4 +13,20 @@ user.addUser = async(userObj) =>{
     if (toAdd) return toAdd
 }
 
+
+user.getWatchList = async(userId)=>{
+    let watchList= await dbLayer.getWatchList(userId);
+    if (watchList) return watchList
+}
+
+user.updateWatchList= async(userId,code)=>{
+    let updated= await dbLayer.addToWatchlist(userId,code);
+    if (updated) return updated
+}
+
+user.deleteWatchList = async(userId,code)=>{
+    let updated= await dbLayer.delFromWatchlist(userId,code);
+    if (updated) return updated
+}
+
 module.exports = user;

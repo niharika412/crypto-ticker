@@ -54,4 +54,43 @@ router.post("/login", async(req,res,next)=>{
         next(er);
     }
 })
+
+router.get("/watchList/:userId", async(req,res,next)=>{
+    try{
+        let userId = req.params.userId;
+        let watchlist = await userService.getWatchList(userId);
+        res.json(watchlist)
+    }
+    catch(er){
+        next(er);
+    }
+})
+
+
+router.put("/addToWatch/:userId/:item",async(req,res,next)=>{
+    try{
+        let userId = req.params.userId;
+        let item = req.params.item
+        let addedtowatch = await userService.updateWatchList(userId,item);
+        res.json(addedtowatch)
+    }
+    catch(er){
+        next(er);
+    }
+})
+
+router.delete("/deleteFromWatch/:userId/:item",async(req,res,next)=>{
+    try{
+        let userId = req.params.userId;
+        let item = req.params.item
+        let deletedFromWatch = await userService.deleteWatchList(userId,item);
+        res.json(deletedFromWatch)
+    }
+    catch(er){
+        next(er);
+    }
+})
+
+
+
 module.exports = router;

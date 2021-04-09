@@ -16,11 +16,11 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-    "userName":"sir",
-    "dob":"11/12/2003",
-    "email":"sir@gmail.com",
-    "password":"Sir1112",
-    "watchList":["BTC"]
+    "userName":"nuj",
+    "dob":"04/12/2003",
+    "email":"nuj@john.com",
+    "password":"nuj28",
+    "watchList":["BTC","DOGE","ETH","WRX"]
 }
 
 
@@ -33,3 +33,16 @@ Content-Type: application/json
   "userName":"asmin", 
   "password":"Asmin06" 
 }
+
+
+###
+
+GET http://localhost:3000/watchList/1111
+
+###
+
+PUT http://localhost:3000/addToWatch/1111/WRX
+
+###
+
+DELETE http://localhost:3000/deleteFromWatch/1111/BTC

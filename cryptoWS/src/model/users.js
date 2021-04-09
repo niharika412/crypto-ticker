@@ -35,4 +35,43 @@ user.addUser = async (userObj)=>{
     }
 }
 
+
+user.getWatchList = async(userId)=>{
+    let userDB = await connection.getUsersCollection();
+    let watch = await userDB.aggregate([{$match:{userId:userId}},{$project:{watchList:1,userId:1}},{$unwind:'$watchList'},{$group:{_id:'$userId', items:{$addToSet:'$watchList'}}}]);
+    if(watch) return watch;
+    else{
+        let err= new Error("Watchlist is not available");
+        err.status = 500;
+        throw err;
+    }
+}
+
+user.addToWatchlist = async (userId,cryptoCode)=>{
+    let userDB = await connection.getUsersCollection();
+    let pushtoarray = await userDB.updateOne({userId:userId},{$push:{watchList:cryptoCode}});
+    if(pushtoarray.nModified ==1){
+        return cryptoCode+" successfully added to WatchList";
+    }
+    else{
+        let err= new Error("Watchlist could not be updated");
+        err.status = 500;
+        throw err;
+    }
+}
+
+
+user.delFromWatchlist = async(userId,code)=>{
+    let userDB = await connection.getUsersCollection();
+    let deleted = await userDB.updateOne({userId:userId},{$pull:{watchList:code}})
+    if(deleted.nModified ==1){
+        return code+" successfully deleted from WatchList";
+    }
+    else{
+        let err= new Error("Watchlist could not be updated");
+        err.status = 500;
+        throw err;
+    }
+}
+
 module.exports = user;

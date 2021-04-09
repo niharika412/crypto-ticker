@@ -1910,3 +1910,88 @@ Tue Apr 06 2021 20:14:26 GMT+0530 (India Standard Time) - Error: You are not reg
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
     at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptows\src\service\userService.js:7:19)
     at async D:\cryptoTicker\crypto-ticker\cryptows\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:36:06 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:36:23 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:37:04 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:45:03 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:48:36 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:48:40 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:48:54 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 11:49:51 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 12:41:43 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Wed Apr 07 2021 12:41:48 GMT+0530 (India Standard Time) - Error: You are not registered. Please register to continue
+    at Object.user.checkLogin (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:9:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.loginUser (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:7:19)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:50:21 
+Fri Apr 09 2021 20:41:45 GMT+0530 (India Standard Time) - CastError: Cast to ObjectId failed for value "0" at path "_id" for model "User"
+    at model.Query.exec (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\mongoose\lib\query.js:4408:21)
+    at model.Query.Query.then (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\mongoose\lib\query.js:4502:15) 
+Fri Apr 09 2021 20:45:17 GMT+0530 (India Standard Time) - ReferenceError: $watchList is not defined
+    at Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:41:80)
+    at async Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:18:20)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:61:25 
+Fri Apr 09 2021 20:46:11 GMT+0530 (India Standard Time) - ReferenceError: $watchList is not defined
+    at Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:41:74)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:18:20)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:61:25 
+Fri Apr 09 2021 20:46:31 GMT+0530 (India Standard Time) - ReferenceError: $userId is not defined
+    at Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:41:101)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:18:20)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:61:25 
+Fri Apr 09 2021 20:46:52 GMT+0530 (India Standard Time) - MongooseError: Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])`
+    at Function.aggregate (D:\cryptoTicker\crypto-ticker\cryptoWS\node_modules\mongoose\lib\model.js:3967:11)
+    at Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:41:30)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.getWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:18:20)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:61:25 
+Fri Apr 09 2021 20:55:47 GMT+0530 (India Standard Time) - ReferenceError: cryptoCode is not defined
+    at Object.user.delFromWatchlist (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:68:9)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.deleteWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:28:18)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:86:32 
+Fri Apr 09 2021 20:56:03 GMT+0530 (India Standard Time) - Error: Watchlist could not be updated
+    at Object.user.delFromWatchlist (D:\cryptoTicker\crypto-ticker\cryptoWS\src\model\users.js:71:18)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.user.deleteWatchList (D:\cryptoTicker\crypto-ticker\cryptoWS\src\service\userService.js:28:18)
+    at async D:\cryptoTicker\crypto-ticker\cryptoWS\src\routes\routing.js:86:32 

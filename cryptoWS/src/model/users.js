@@ -24,9 +24,8 @@ user.generateID = async()=>{
 user.addUser = async (userObj)=>{
     let usersDB = await connection.getUsersCollection();
     userObj.userId= await user.generateID();
-    console.log(userObj)
+    // console.log(userObj)
     let added = await usersDB.create(userObj);
-
     if(added) return added;
     else{
         let err= new Error("Registration not successful");

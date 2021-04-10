@@ -13,3 +13,8 @@ mat-toolbar{
   color: white;
   background-color: #1DA1F2;
 }
+
+.welcome{
+  color: #1DA1F2;
+  font-family: 'Suede';
+}

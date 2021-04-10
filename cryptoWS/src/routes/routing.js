@@ -44,7 +44,7 @@ router.post("/register",async(req,res,next)=>{
     }
 })
 
-router.post("/login", async(req,res,next)=>{
+router.put("/login", async(req,res,next)=>{
     try{
         let userObj = req.body;
         let login = await userService.loginUser(userObj);

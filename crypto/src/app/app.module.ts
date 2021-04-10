@@ -29,6 +29,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     MatChipsModule,
     MatTabsModule,
     MatGridListModule,
+    MatSnackBarModule,
     NgbModule,
   ],
   providers: [],

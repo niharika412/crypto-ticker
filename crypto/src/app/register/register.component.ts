@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { RegisterService } from './register.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,9 +11,12 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private router:Router,private fb:FormBuilder,private regService:RegisterService,private _snackBar: MatSnackBar) { }
 
   registerForm:any;
+  successMessage:any;
+  errorMessage:any;
+
   ngOnInit(): void {
     this.registerForm= this.fb.group({
       name:['',[Validators.required,Validators.minLength(4)]],
@@ -41,5 +47,27 @@ export class RegisterComponent implements OnInit {
     console.log(today,date)
     if(date>=today) return {dobError:"DOB should be less than today's date."}
     else return null
+  }
+  userObj:any;
+  userDetails:any;
+  register(){
+    this.userObj={
+      "userName":this.registerForm.value.name,
+      "password":this.registerForm.value.password,
+      "dob":this.registerForm.value.dob,
+      "email":this.registerForm.value.email
+    }
+    this.regService.register(this.userObj).subscribe((success:any)=>
+    {   
+      this.userDetails=success;
+      this._snackBar.open("Registration successful ! {´◕ ◡ ◕｀}", "❎", {
+        duration: 2000,
+      });
+        sessionStorage.setItem('loggedIn', 'true');
+        sessionStorage.setItem('username',this.userDetails.userName)
+        sessionStorage.setItem('userId',this.userDetails.userId)
+        this.router.navigate(['/search'])
+  
+    },(error:any)=>this.errorMessage=error.message)
   }
 }

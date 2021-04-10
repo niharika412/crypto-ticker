@@ -11,7 +11,8 @@
         <mat-card-header>
             <img mat-card-avatar class="header-image" src="./assets/color/{{name | lowercase}}.svg">
             <mat-card-title class="cardTitle">{{name}}</mat-card-title>
-            <a mat-button><span class="material-icons">bookmark</span></a>
+            <span class="example-spacer"></span>
+            <a mat-button><span class="material-icons" mat-button (click)="addToWatchList(name)">bookmark_add</span></a>
         </mat-card-header>
         <mat-card-content>
             <div class="row">

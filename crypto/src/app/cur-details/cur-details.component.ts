@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CurdetailsService } from './curdetails.service';
 import { DatePipe } from '@angular/common'
 import { ActivatedRoute } from '@angular/router';
+import { WatchlistService } from '../watchlist/watchlist.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'cur-details',
@@ -11,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CurDetailsComponent implements OnInit {
 
-  constructor(private curDetService:CurdetailsService,public datepipe:DatePipe) { }
+  constructor(private _snackBar:MatSnackBar,private curDetService:CurdetailsService,public datepipe:DatePipe, private wsService:WatchlistService) { }
 
   ngOnInit(): void {
   
@@ -61,5 +63,21 @@ export class CurDetailsComponent implements OnInit {
 
   getMarketHistory(){
     this.curDetService.getMarketHistory(this.name).subscribe((success:any)=>{ this.history=success;return this.history},(error:any)=>this.errMsg=error);
+  }
+
+  userId:any;
+
+  addToWatchList(item:any){
+    this.userId = sessionStorage.getItem('userId');
+    this.wsService.addToWatch(this.userId,item).subscribe((success:any)=>{
+      this._snackBar.open("Added to Wishlist", "", {
+        duration: 2000,
+      });
+    },(error:any)=>{
+      this._snackBar.open("Some error occured", "", {
+        duration: 2000,
+      });
+    })
+
   }
 }

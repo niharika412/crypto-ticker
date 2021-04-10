@@ -2,9 +2,13 @@
   <button mat-icon-button class="example-icon" (click)="reload()">
     <mat-icon>moving</mat-icon>
   </button>
-  <span>Crypticker</span>
+  <span mat-button [routerLink]="['/search']">Crypticker</span>
   <span class="example-spacer"></span>
-  <button mat-button class="login-icon favorite-icon" [routerLink]="['/login']" >
+  <span *ngIf="loggedIn" class="welcome"> Hi, {{username}} </span>&nbsp;
+  <button mat-icon-button class="example-icon" *ngIf="loggedIn" [routerLink]="['/watchlist']">
+    <mat-icon>bookmarks</mat-icon>
+  </button>
+  <button mat-button class="login-icon favorite-icon" [routerLink]="['/login']" *ngIf="!loggedIn" >
     <mat-icon>person_outline</mat-icon>Login
   </button>
   <button mat-icon-button class="example-icon">

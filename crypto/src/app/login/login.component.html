@@ -8,13 +8,13 @@
                         <p>Sign In</p>
                         <p>
                             <mat-form-field appearance="fill">
-                                <mat-label>Enter your email:</mat-label>
-                                <input matInput formControlName="email">
+                                <mat-label>Enter your username:</mat-label>
+                                <input matInput formControlName="name">
                                 <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                                 <mat-hint>Ex: jane@doe.com</mat-hint>
-                                <mat-error *ngIf="loginForm.controls.email.errors">
-                                    <span *ngIf="loginForm.controls.email.errors.required">Field cannot be empty</span>
-                                    <span *ngIf="loginForm.controls.email.errors && !loginForm.controls.email.errors.required">{{loginForm.controls.email.errors.emailError}}</span>
+                                <mat-error *ngIf="loginForm.controls.name.errors">
+                                    <span *ngIf="loginForm.controls.name.errors.required">Field cannot be empty</span>
+                                    <span *ngIf="loginForm.controls.name.errors && !loginForm.controls.name.errors.required">Name format is incorrect</span>
                                 </mat-error>
                             </mat-form-field>
                         </p>
@@ -34,7 +34,9 @@
                             </mat-form-field>
                         </p>
                         <br>
-                        <button mat-raised-button class="login-btn btn btn-block">Login</button>
+                        <button mat-raised-button class="login-btn btn btn-block" [disabled]="loginForm.invalid" (click)="submit()">Login</button>
+                        <p *ngIf="errorMessage">{{errorMessage |json}}</p>
+                        
                         <button class="btn btn-link" [routerLink]="['/register']" >Not a member? Register Here.</button>
 
                     </form>

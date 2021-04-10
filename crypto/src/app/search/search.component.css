@@ -40,6 +40,9 @@ mat-icon{
   animation: down 1s linear infinite;
 }
 
+#name{
+  background-color: white;
+}
 .market{
     color:#AAB8C2;
     animation: down 1s linear infinite;

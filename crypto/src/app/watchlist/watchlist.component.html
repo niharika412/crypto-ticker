@@ -1,5 +1,24 @@
 <div class="container">
-    <div class="row">
-        
-    </div>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>In your watchlist:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of watchlist">
+            <td>
+            <mat-card>
+              <mat-card-title>
+                <img mat-card-avatar class="header-image" src="./assets/color/{{item | lowercase}}.svg"> &nbsp;&nbsp;
+                <span>{{item}}</span></mat-card-title>
+              <mat-card-content>
+                <div class="d-flex flex-row-reverse">
+                  <div class="p-2"><button class="btn btn-danger float-right" mat-raised-button (click)="deleteFromWatchList(item)">🗑</button></div>
+                </div>
+              </mat-card-content>
+            </mat-card></td>
+          </tr>
+        </tbody>
+      </table>
 </div>

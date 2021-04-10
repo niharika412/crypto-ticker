@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 const routes: Routes = [
-  {path:'search',component:SearchComponent},
+  {path:'search',component:SearchComponent, data: { loggedIn: false }},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path:'watchlist',component:WatchlistComponent},
   {path:"**", component:SearchComponent,pathMatch:"full"}
 ];
 

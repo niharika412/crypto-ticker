@@ -7,7 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 
 const routes: Routes = [
-  {path:'search',component:SearchComponent, data: { loggedIn: false }},
+  {path:'search',component:SearchComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'watchlist',component:WatchlistComponent},

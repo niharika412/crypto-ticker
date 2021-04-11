@@ -1,0 +1,20 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+mat-toolbar{
+  background-color: #121212;
+  color: white;
+  font-size: medium;
+}
+
+.login-icon{
+  color: white;
+  background-color: #1DA1F2;
+}
+
+.welcome{
+  color: #1DA1F2;
+  font-family: 'Suede';
+}

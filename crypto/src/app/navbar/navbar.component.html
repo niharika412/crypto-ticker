@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="reload()">
+        <mat-icon>moving</mat-icon>
+    </button>
+    <span mat-button [routerLink]="['/search']">Crypticker</span>
+    <span class="example-spacer"></span>
+    <span *ngIf="loggedIn==true" class="welcome"> Hi, {{username}} </span>&nbsp;
+    <button mat-icon-button class="example-icon" *ngIf="loggedIn==true" [routerLink]="['/watchlist']">
+        <mat-icon>bookmarks</mat-icon>
+    </button>
+    <button mat-button class="login-icon favorite-icon" [routerLink]="['/login']" *ngIf="loggedIn!=true">
+        <mat-icon>person_outline</mat-icon>Login
+    </button>
+    <button mat-icon-button class="example-icon" *ngIf="loggedIn==true" (click)="logOut()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

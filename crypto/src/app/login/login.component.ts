@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('loggedIn', 'true');
         sessionStorage.setItem('username',this.userDetails.userName)
         sessionStorage.setItem('userId',this.userDetails.userId)
-        this.router.navigateByUrl('/search',{ state: { loggedIn:true}})
+        this.router.navigateByUrl('/search')
       }
     },(error:any)=>this.errorMessage=error.error.message);
     

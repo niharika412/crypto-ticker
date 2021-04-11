@@ -8,22 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'crypto';
-  loggedIn:any;
-  username:any;
-  reload(){
-    window.location.reload();
-  }
-  constructor(private router:Router, private ar:ActivatedRoute){
-  }
-  ngOnInit(){
 
-    this.ar.data.subscribe((data:any)=>
-      this.loggedIn=data.loggedIn)
-    // if(sessionStorage.getItem('loggedIn')=='true'){
-    //   this.loggedIn=true;
-    //   this.username=sessionStorage.getItem('username')
-    //   console.log(this.loggedIn)
-    // }
+  constructor(){
   }
 
 }

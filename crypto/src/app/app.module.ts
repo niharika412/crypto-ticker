@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   ChartComponent,
   LoginComponent,
   RegisterComponent,
-  WatchlistComponent ],
+  WatchlistComponent,
+  NavbarComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

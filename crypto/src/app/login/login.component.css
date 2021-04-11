@@ -1,8 +1,11 @@
 .login{
     width: 100%;
     text-align: center;
-    color:white;
     background-color: #242526;
+}
+
+.log{
+    margin-top: 10%;
 }
 
 mat-form-field{

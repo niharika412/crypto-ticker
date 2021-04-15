@@ -24,8 +24,9 @@ Realtime cryptocurrency watcher and tracker
 ## Notes & Sources
 
 ### APIs used:
-    * [WazirX API](https://github.com/WazirX/wazirx-api)
-    * [Alphavantage API](https://www.alphavantage.co)
+
+* [WazirX API](https://github.com/WazirX/wazirx-api)
+* [Alphavantage API](https://www.alphavantage.co)
  
 
 ## Libraries and Frameworks `cryptoticker` uses

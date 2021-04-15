@@ -14,9 +14,7 @@ Realtime cryptocurrency watcher and tracker
 
 **Backend - (CryptoWS dir)**
 
-``` npm i
-    node app.js 
-```
+```node app.js``` (Server will start)
 
 **Frontend- (Crypto dir)**
 
@@ -25,9 +23,9 @@ Realtime cryptocurrency watcher and tracker
 
 ## Notes & Sources
 
-# APIs used:
-    * <a href="https://github.com/WazirX/wazirx-api">WazirX API</a>
-    * <a href="https://www.alphavantage.co/">Alphavantage API</a>
+### APIs used:
+    * [WazirX API](https://github.com/WazirX/wazirx-api)
+    * [Alphavantage API](https://www.alphavantage.co)
  
 
 ## Libraries and Frameworks `cryptoticker` uses

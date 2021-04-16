@@ -8,15 +8,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of watchlist">
+          <tr *ngFor="let item of watch">
             <td>
             <mat-card>
               <mat-card-title>
-                <img mat-card-avatar class="header-image" src="./assets/color/{{item | lowercase}}.svg"> &nbsp;&nbsp;
-                <span>{{item}}</span></mat-card-title>
+                <img mat-card-avatar class="header-image" src="./assets/color/{{item.name | lowercase}}.svg"> &nbsp;&nbsp;
+                <span>{{item.name}}</span>
+                <button class="btn btn-danger float-right" mat-raised-button (click)="deleteFromWatchList(item)">🗑</button>
+              </mat-card-title>
               <mat-card-content>
-                <div class="d-flex flex-row-reverse">
-                  <div class="p-2"><button class="btn btn-danger float-right" mat-raised-button (click)="deleteFromWatchList(item)">🗑</button></div>
+                <div class="price-tag">
+                  <p class="font-italic">Last traded price: <span class="price"> {{item.last}}</span> </p>
                 </div>
               </mat-card-content>
             </mat-card></td>

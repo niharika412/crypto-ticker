@@ -41,8 +41,8 @@ GET http://localhost:3000/watchList/1112
 
 ###
 
-PUT http://localhost:3000/addToWatch/1112/MANA
+PUT http://localhost:3000/addToWatch/1112/TUSD
 
 ###
 
-DELETE http://localhost:3000/deleteFromWatch/1111/BTC
+DELETE http://localhost:3000/deleteFromWatch/1112/TUSD

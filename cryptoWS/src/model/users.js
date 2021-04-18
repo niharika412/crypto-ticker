@@ -63,6 +63,7 @@ user.addToWatchlist = async (userId,cryptoCode)=>{
 user.delFromWatchlist = async(userId,code)=>{
     let userDB = await connection.getUsersCollection();
     let deleted = await userDB.updateOne({userId:userId},{$pull:{watchList:code}})
+    // console.log(userId,code,deleted)
     if(deleted.nModified ==1){
         return code+" successfully deleted from WatchList";
     }

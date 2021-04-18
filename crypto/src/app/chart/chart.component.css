@@ -1,8 +1,10 @@
 mat-button-toggle-group{
-    margin-left: 35%;
+    margin-left: 30%;
     background-color: white;
 }
 mat-button-toggle{
+    padding: 1%;
+
     background-color: #657786;
     color: white;
 }

@@ -14,7 +14,7 @@
               <mat-card-title>
                 <img mat-card-avatar class="header-image" src="./assets/color/{{item.name | lowercase}}.svg"> &nbsp;&nbsp;
                 <span>{{item.name}}</span>
-                <button class="btn btn-danger float-right" mat-raised-button (click)="deleteFromWatchList(item)">🗑</button>
+                <button class="btn btn-danger float-right" mat-raised-button (click)="deleteFromWatchList(item.name)">🗑</button>
               </mat-card-title>
               <mat-card-content>
                 <div class="price-tag">

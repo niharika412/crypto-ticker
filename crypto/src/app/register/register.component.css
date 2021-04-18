@@ -5,6 +5,10 @@
     background-color: #242526;
 }
 
+.log{
+    margin-top: 5%;
+}
+
 mat-form-field{
     width: 100%;
 }

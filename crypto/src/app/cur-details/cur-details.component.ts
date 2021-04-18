@@ -17,6 +17,9 @@ export class CurDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   
+    if(sessionStorage.getItem("loggedIn")=="true"){
+      this.logged=true;
+    }
     this.getMeta();
     this.orders =this.getOrders();
     this.history=this.getMarketHistory();
@@ -30,7 +33,7 @@ export class CurDetailsComponent implements OnInit {
   }
   @Input()
   name:any;
-
+  logged:boolean=false;
   errorMessage:any;
   today:any
   metadata:any;

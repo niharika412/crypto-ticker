@@ -45,7 +45,7 @@ export class WatchlistComponent implements OnInit {
   }
 
   deleteFromWatchList(item: string) {
-    this.watchlist = this.watchlist.filter((items: any) => items != item)
+    this.watch = this.watch.filter((items: any) => items.name != item)
     this.wsService.deleteWatch(this.userId, item).subscribe((success: any) => this.success = success, (error) => this.err = error.message)
   }
 

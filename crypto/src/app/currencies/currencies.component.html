@@ -6,7 +6,6 @@
           <table class="table table-dark">
             <thead>
               <tr>
-                <th>Sr No</th>
                 <th>Icon</th>
                 <th>Name</th>
                 <th>Last Price</th>
@@ -17,7 +16,6 @@
             <tbody>
               <ng-container *ngFor="let currency of currencyArray let i=index;">
                 <tr *ngIf="currency.quote_unit=='usdt'">
-                  <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit }}</td>
@@ -38,7 +36,6 @@
           <table class="table table-dark">
             <thead>
               <tr>
-                <th>Sr No</th>
                 <th scope="col">Icon</th>
                 <th scope="col">Name</th>
                 <th scope="col">Last Price</th>
@@ -49,7 +46,6 @@
             <tbody>
               <ng-container *ngFor="let currency of currencyArray; let i=index;">
                 <tr *ngIf="currency.quote_unit=='inr'">
-                  <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>
@@ -69,7 +65,6 @@
           <table class="table table-dark">
             <thead>
               <tr>
-                <th>Sr No</th>
                 <th scope="col">Icon</th>
                 <th scope="col">Name</th>
                 <th scope="col">Last Price</th>
@@ -80,7 +75,6 @@
             <tbody>
               <ng-container *ngFor="let currency of currencyArray ;let i=index;">
                 <tr *ngIf="currency.quote_unit=='btc'">
-                  <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onError="this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>
@@ -100,7 +94,6 @@
           <table class="table table-dark">
             <thead>
               <tr>
-                <th>Sr No</th>
                 <th scope="col">Icon</th>
                 <th scope="col">Name</th>
                 <th scope="col">Last Price</th>
@@ -111,7 +104,6 @@
             <tbody>
               <ng-container *ngFor="let currency of currencyArray;let i=index;">
                 <tr *ngIf="currency.quote_unit=='wrx'">
-                  <td>{{i}}</td>
                   <td><img src="./assets/color/{{currency.base_unit}}.svg"
                       onerror="this.onerror=null;this.src='./assets/color/image-not-found.svg'"></td>
                   <td>{{currency.base_unit}}</td>

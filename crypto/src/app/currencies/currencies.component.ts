@@ -28,7 +28,10 @@ export class CurrenciesComponent implements OnInit {
   ngOnInit(): void {
     this.currencyArray = this.getCurrencies();    
     // console.log(this.change)
+    //executes every 10 seconds (10*1000 ms).i.e. table is refreshed
+    //workaround to be found
     setInterval(() => {
+      //reallocate array 
       this.previous = [...this.change];
       this.currencyArray.splice(0)
       this.currencyArray =  this.getCurrencies();
@@ -67,6 +70,7 @@ export class CurrenciesComponent implements OnInit {
       for(let i=0;i<this.currencyArray.length;i++){
         this.currencyArray[i].change=(this.change[i]-this.pChange[i]);
         if((this.change[i]-this.pChange[i])>=0){
+          //assigning colors according to increase/decrease in price
           this.currencyArray[i].colors='green'
         }
         else{

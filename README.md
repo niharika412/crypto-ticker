@@ -3,7 +3,6 @@
 Realtime cryptocurrency watcher and tracker
 </p>
 
-![CryptoTicker GIF](https://github.com/niharika412/crypto-ticker/blob/master/crypto.gif)
 
 ## Features
  

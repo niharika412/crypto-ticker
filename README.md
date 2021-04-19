@@ -5,12 +5,16 @@ Realtime cryptocurrency watcher and tracker
 
 ## Screenshots
 
+*Home Page
 ![Home page / search bar](assets/search.png)
 
+*Live reloading currencies
 ![currencies with live reloading](assets/currencies.png)
 
+*Currency details
 ![Currency details with chart](assets/details.png)
 
+*Watchlist (Only visible after logging in)
 ![Watchlist](assets/watchlist.png)
 
 

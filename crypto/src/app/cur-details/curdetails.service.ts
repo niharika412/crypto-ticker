@@ -10,7 +10,8 @@ export class CurdetailsService {
   constructor(private http:HttpClient) { }
 
   getMetaData(name:string):Observable<any>{
-    return this.http.get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol='+ name+'&market=CNY&apikey=0810B66ZW6LV5TTU')
+                                                                                                              //add your key
+    return this.http.get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol='+ name+'&market=CNY&apikey=')
   }
 
 
